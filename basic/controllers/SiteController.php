@@ -94,29 +94,4 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    
-    
-    
-    public function actionDemo()
-    {
-    	$seller 				= new Seller();
-    	$seller->seller_name 	= "测试";
-    	$seller->seller_phone 	= "15003945225";
-    	$seller->province 		= "江苏省";
-    	$seller->county   		= "苏州市";
-    	$seller->area   		= "吴中区";
-    	$seller->address  		= "吴中大道";
-    	$seller->employee_id 	= "mm";
-    	$seller->longitude   	= "120";
-    	$seller->latitude    	= "31";
-    	$result 				= $seller->insert();
-
-    	
-//     	$dp 					= new DingtalkDepartment();
-//     	$dp->name 				= "测试部门";
-//     	$dp->parentid 			= 1;
-//     	$dp->order 				= 5;
-//     	$result 				= $dp->insert();
-    	Dump::dump($result);
-    }
 }
